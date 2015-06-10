@@ -1,5 +1,4 @@
-#ifndef _SPAWNER_UNIT_CONVERT_H_
-#define _SPAWNER_UNIT_CONVERT_H_
+#pragma once
 
 #include <string>
 
@@ -60,5 +59,3 @@ long double convert(const value_t &from, const value_t &to, const long double &v
 std::string convert(const value_t &from, const value_t &to, const long double &val, const char *format, const long double &inf_value = -1);
 
 unsigned long convert(const value_t &to, const std::string &val, const unsigned long &default_value = 0);
-
-#endif//_SPAWNER_UNIT_CONVERT_H_

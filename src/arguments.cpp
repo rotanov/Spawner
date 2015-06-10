@@ -1,5 +1,7 @@
 #include "arguments.h"
+
 #include <iostream>
+#include <algorithm>
 
 compact_list_c::compact_list_c(){}
 
@@ -224,9 +226,9 @@ console_argument_parser_c::parsing_state_e console_argument_parser_c::process_ar
     size_t divider_length = 0;
     for (auto i = parser_object->dividers.begin(); i != parser_object->dividers.end(); i++) {
         size_t pos = s.find(*i);
-        length = min_def(length, pos);
+        length = std::min(length, pos);
         if (length == pos) {
-            divider_length = max_def(divider_length, (*i).length());
+            divider_length = std::max(divider_length, (*i).length());
         }
     }
     left = s.substr(0, length);

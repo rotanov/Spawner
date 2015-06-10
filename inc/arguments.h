@@ -9,14 +9,9 @@
 #include "inc/compatibility.h"
 #include "inc/uconvert.h"
 
-#define min_def(x, y)((x)<(y)?(x):(y))
-#define max_def(x, y)((x)>(y)?(x):(y))
+typedef char* argument_type_t;
 
-#define ARGUMENT()
-
-typedef char *argument_type_t;
-
-static const char *SEPARATOR_ARGUMENT = "spawner.argument.separator";
+static const char* SEPARATOR_ARGUMENT = "spawner.argument.separator";
 
 //unique names for arguments
 
@@ -86,7 +81,9 @@ protected:
     T &value;
     std::string error;
 public:
-    base_argument_parser_c(T &value) : value(value), abstract_argument_parser_c() {}
+    base_argument_parser_c(T &value)
+        : value(value)
+        , abstract_argument_parser_c() {}
     virtual bool set(const std::string &s) {return false;}
     virtual bool apply(const std::string &s) {
         if (!set(s)) {
@@ -105,7 +102,8 @@ protected:
     bool initialized;
 public:
     //abstract_parser_c(const parser_t &parser){}
-    abstract_parser_c() : initialized(false) {}
+    abstract_parser_c()
+        : initialized(false) {}
     ~abstract_parser_c();
     virtual bool invoke_initialization(abstract_settings_parser_c &parser_object){return false;} //init settings for parser object
     virtual abstract_argument_parser_c *add_argument_parser(const std::vector<std::string> &params, abstract_argument_parser_c *argument_parser);

@@ -1,9 +1,9 @@
-#ifndef _SPAWNER_SESSION_H_
-#define _SPAWNER_SESSION_H_
+#pragma once
 
 #include <string>
-#include <inc/md5/md5.h>
 #include <sstream>
+
+#include "inc/md5/md5.h"
 
 class session_class {
 private:
@@ -26,5 +26,3 @@ public:
     }
 
 };
-
-#endif//_SPAWNER_SESSION_H_

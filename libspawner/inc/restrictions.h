@@ -1,8 +1,8 @@
-#ifndef _SPAWNER_RESTRICTIONS_H_
-#define _SPAWNER_RESTRICTIONS_H_
+#pragma once
 
 #include <string>
-#include <inc/session.h>
+
+#include "inc/session.h"
 
 enum restriction_kind_t
 {
@@ -33,5 +33,3 @@ struct restrictions_class
     restriction_t &operator [](int i);
     static restriction_kind_t restriction_by_name(const std::string &name);
 };
-
-#endif//_SPAWNER_RESTRICTIONS_H_

@@ -1,5 +1,4 @@
-#ifndef _SPAWNER_STATUS_H_
-#define _SPAWNER_STATUS_H_
+#pragma once
 
 #include "platform.h"
 
@@ -11,7 +10,7 @@ enum process_status_t
     process_finished_abnormally = 0x5, //b 0000 0101
     process_finished_terminated = 0x9, //b 0000 1001
     process_not_started         = 0x80,//b 1000 0000
-    process_spawner_crash    = 0x90,//b 1001 0000
+    process_spawner_crash    = 0x90, //b 1001 0000
 };
 
 #ifdef _WIN32
@@ -61,5 +60,3 @@ enum terminate_reason_t
 };
 
 #endif//_WIN32
-
-#endif//_SPAWNER_STATUS_H_

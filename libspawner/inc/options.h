@@ -1,10 +1,9 @@
-#ifndef _SPAWNER_OPTIONS_H_
-#define _SPAWNER_OPTIONS_H_
-
-#include <inc/session.h>
+#pragma once
 
 #include <list>
 #include <vector>
+
+#include "inc/session.h"
 // hide_gui - creates process with hidden flag turned on
 // silent_errors - on windows, if error occurs program doesn't show "send report" dialog
 // #to do: make some options as map of variant
@@ -66,6 +65,3 @@ struct options_class
     bool controller;
     std::string environmentMode;
 };
-
-#endif//_SPAWNER_OPTIONS_H_
-

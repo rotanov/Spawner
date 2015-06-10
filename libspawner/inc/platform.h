@@ -6,9 +6,10 @@
 /* * Make report.cpp kinda cross-platform                               */
 /************************************************************************/
 
-#include <stdlib.h>
+#include <cstdlib>
 #ifdef _WIN32
 
+#define NOMINMAX
 //#ifndef _MSC_VER
 #if _WIN32_WINNT < 0x0501
 #define _WIN32_WINNT 0x0501

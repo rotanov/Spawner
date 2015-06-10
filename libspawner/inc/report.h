@@ -1,7 +1,7 @@
-#ifndef _SPAWNER_REPORT_H_
-#define _SPAWNER_REPORT_H_
+#pragma once
 
 #include <string>
+
 #include "status.h"
 #include "options.h"
 #include "restrictions.h"
@@ -36,5 +36,3 @@ public:
     std::wstring login;
     std::string working_directory;
 };
-
-#endif//_SPAWNER_REPORT_H_

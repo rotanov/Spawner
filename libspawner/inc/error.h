@@ -2,10 +2,8 @@
 
 #include <string>
 #include <functional>
-#include <Windows.h>
 
 std::string get_stacktrace_string();
-void make_minidump(EXCEPTION_POINTERS* e);
 void set_on_panic_action(const std::function<void()> action);
 void set_error_text(const std::string& error_text);
 const std::string& get_error_text();
